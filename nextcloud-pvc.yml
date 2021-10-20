@@ -1,0 +1,42 @@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nextcloud
+  annotations:
+    nfs.io/storage-path: "data01/nextcloud/config"
+spec:
+  storageClassName: managed-nfs-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: data
+  annotations:
+    nfs.io/storage-path: "data01/nextcloud/data"
+spec:
+  storageClassName: managed-nfs-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nextcloud-mariadb
+  annotations:
+    nfs.io/storage-path: "data01/nextcloud/db"
+spec:
+  storageClassName: managed-nfs-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
