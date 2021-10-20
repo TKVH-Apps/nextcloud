@@ -47,6 +47,16 @@ spec:
             memory: 512Mi
           requests:
             memory: 256Mi
+        readinessProbe:
+          tcpSocket:
+            port: nextcloud
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: nextcloud
+          initialDelaySeconds: 15
+          periodSeconds: 20
       volumes:
       - name: nextcloud
         persistentVolumeClaim:
