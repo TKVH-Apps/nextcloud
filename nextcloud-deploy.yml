@@ -52,9 +52,9 @@ spec:
             path: /
             port: nextcloud
             scheme: HTTPS
-          httpHeaders:
-          - name: Host
-            value: localhost
+            httpHeaders:
+            - name: Host
+              value: localhost
           initialDelaySeconds: 30
           periodSeconds: 10
         livenessProbe:
@@ -62,9 +62,9 @@ spec:
             path: /
             port: nextcloud
             scheme: HTTPS
-          httpHeaders:
-          - name: Host
-            value: localhost
+            httpHeaders:
+            - name: Host
+              value: localhost
           initialDelaySeconds: 40
           periodSeconds: 20
       volumes:
