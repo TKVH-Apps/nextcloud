@@ -48,12 +48,14 @@ spec:
           requests:
             memory: 128Mi
         readinessProbe:
-          tcpSocket:
+          httpGet:
+            path: /
             port: nextcloud
           initialDelaySeconds: 5
           periodSeconds: 10
         livenessProbe:
-          tcpSocket:
+          httpGet:
+            path: /
             port: nextcloud
           initialDelaySeconds: 15
           periodSeconds: 20
