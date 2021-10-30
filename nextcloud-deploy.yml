@@ -51,15 +51,15 @@ spec:
           httpGet:
             path: /
             port: nextcloud
-            scheme: "HTTPS"
-          initialDelaySeconds: 20
+            scheme: HTTPS
+          initialDelaySeconds: 30
           periodSeconds: 10
         livenessProbe:
           httpGet:
             path: /
             port: nextcloud
-            scheme: "HTTPS"
-          initialDelaySeconds: 30
+            scheme: HTTPS
+          initialDelaySeconds: 40
           periodSeconds: 20
       volumes:
       - name: nextcloud
