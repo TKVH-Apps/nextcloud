@@ -8,5 +8,6 @@ resources:
   - nextcloud-pvc.yml
   - nextcloud-spc.yml
   - nextcloud-sa.yml
+  - nextcloud-ns.yml
   - mariadb-deploy.yml
   - mariadb-svc.yml
