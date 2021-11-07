@@ -54,9 +54,9 @@ spec:
           mountPath: /data
         resources:
           limits:
-            memory: 384Mi
+            memory: 512Mi
           requests:
-            memory: 128Mi
+            memory: 256Mi
         readinessProbe:
           httpGet:
             path: /
