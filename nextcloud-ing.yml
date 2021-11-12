@@ -14,7 +14,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: <path:apps-kv/data/nextcloud/config#HOST>
+  - host: cloud.<path:apps-kv/data/general#DN>
     http:
       paths:
       - path: /
@@ -26,4 +26,4 @@ spec:
               number: 443
   tls:
   - hosts:
-    - <path:apps-kv/data/nextcloud/config#HOST>
+    - cloud.<path:apps-kv/data/general#DN>
