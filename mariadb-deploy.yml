@@ -24,6 +24,16 @@ spec:
         app: mariadb
         part-of: nextcloud
     spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            preference:
+              matchExpressions:
+              - key: disktype
+                operator: In
+                values:
+                - ssd
       serviceAccountName: nextcloud
       containers:
       - name: mariadb
