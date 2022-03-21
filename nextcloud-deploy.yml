@@ -29,7 +29,7 @@ spec:
                 - ssd   
       containers:
       - name: nextcloud
-        image: ghcr.io/linuxserver/nextcloud:23.0.2
+        image: ghcr.io/linuxserver/nextcloud:23.0.3
         ports:
         - name: nextcloud
           containerPort: 443
