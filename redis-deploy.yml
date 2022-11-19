@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: redis
+  labels:
+    app: redis
+    part-of: nextcloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+      part-of: nextcloud
+  template:
+    metadata:
+      labels:
+        app: redis
+        part-of: nextcloud
+    spec:
+      containers:
+      - name: redis
+        image: redis:latest
+        ports:
+        - name: redis
+          containerPort: 6379
+        resources:
+          limits:
+            memory: 256Mi
+          requests:
+            memory: 128Mi
