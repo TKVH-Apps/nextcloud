@@ -11,3 +11,6 @@ resources:
   - nextcloud-ns.yml
   - mariadb-deploy.yml
   - mariadb-svc.yml
+  - redis-deploy.yml
+  - redis-svc.yml
+
