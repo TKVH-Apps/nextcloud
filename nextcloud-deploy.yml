@@ -45,6 +45,8 @@ spec:
         volumeMounts:
         - name: nextcloud
           mountPath: /config
+        - name: customscripts
+          mountPath: /custom-cont-init.d
         - name: data
           mountPath: /data
         resources:
@@ -59,3 +61,6 @@ spec:
       - name: data
         persistentVolumeClaim:
           claimName: data
+      - name: customscripts
+        persistentVolumeClaim:
+          claimName: customscripts

@@ -73,9 +73,9 @@ spec:
           readOnly: true
         resources:
           limits:
-            memory: 256Mi
+            memory: 512Mi
           requests:
-            memory: 128Mi
+            memory: 400Mi
       volumes:
       - name: nextcloud-mariadb
         persistentVolumeClaim:
