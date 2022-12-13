@@ -42,6 +42,8 @@ spec:
           value: "022"
         - name: TZ
           value: "Europe/Paris"
+        - name: INSTALL_PACKAGES
+          value: libva|libva-intel-driver|intel-media-driver|mesa-va-gallium|perl
         volumeMounts:
         - name: nextcloud
           mountPath: /config
