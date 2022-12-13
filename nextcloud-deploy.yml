@@ -47,6 +47,8 @@ spec:
           mountPath: /config
         - name: customscripts
           mountPath: /custom-cont-init.d
+        - name: customservices
+          mountPath: /custom-services.d
         - name: data
           mountPath: /data
         resources:
@@ -64,3 +66,6 @@ spec:
       - name: customscripts
         persistentVolumeClaim:
           claimName: customscripts
+      - name: customservices
+        persistentVolumeClaim:
+          claimName: customservices
