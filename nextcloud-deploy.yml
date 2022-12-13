@@ -29,8 +29,6 @@ spec:
                 - ssd   
       containers:
       - name: nextcloud
-        securityContext:
-          privileged: true
         image: ghcr.io/linuxserver/nextcloud:25.0.1-php8
         ports:
         - name: nextcloud
@@ -57,11 +55,8 @@ spec:
           mountPath: /custom-services.d
         - name: data
           mountPath: /data
-        - name: dev-dri
-          mountPath: /dev/dri
         resources:
           limits:
-            gpu.intel.com/i915: 1
             memory: 512Mi
           requests:
             memory: 256Mi
@@ -78,6 +73,3 @@ spec:
       - name: customservices
         persistentVolumeClaim:
           claimName: customservices
-      - name: dev-dri
-        hostPath:
-          path: /dev/dri
